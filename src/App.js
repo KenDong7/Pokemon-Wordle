@@ -3,6 +3,8 @@ import './App.css';
 import axios from "axios";
 import CorrectType1 from "./CorrectType1";
 import CorrectType2 from "./CorrectType2";
+import CorrectWeight from "./CorrectWeight";
+import CorrectHeight from "./CorrectHeight";
 
 function App() {
   const [pokemon, setPokemon] = useState("");
@@ -92,20 +94,20 @@ function App() {
               <div className = "tableBody">
 
               <div className = "tableRow"> 
-                <div className = "tableCell"> Type 1</div>
+                <div className = "tableCell"> Type 1 </div>
                 <CorrectType1 targetType = {targetType[0]} chosenType = {pokemonType[0]}/>
               </div>
               <div className = "tableRow"> 
-                <div className = "tableCell"> Type 2</div>
+                <div className = "tableCell"> Type 2 </div>
                 <CorrectType2 targetType = {targetType[1]} chosenType = {pokemonType[1]}/>
               </div>
               <div className = "tableRow"> 
                 <div className = "tableCell"> Height </div>
-                <div className = "tableCell field" id = "height"> {Math.round(data.height * 3.9)}"</div>
+                <CorrectHeight targetHeight = {Math.round(targetData[0].height * 3.93701)} chosenHeight = {Math.round(data.height * 3.93701)}/>
               </div>
               <div className = "tableRow"> 
                 <div className = "tableCell"> Weight </div>
-                <div className = "tableCell field" id = "weight"> {Math.round(data.weight / 4.3)} lbs </div>
+                <CorrectWeight targetWeight = {Math.round(targetData[0].weight / 4.53592 * 10) / 10} chosenWeight = {Math.round(data.weight / 4.53592 * 10) / 10}/>
               </div>
             </div>
           </div>
@@ -113,10 +115,9 @@ function App() {
         )
       })}
       <div className = "container">
-        <a className href="https://pokemondb.net/pokedex/stats/height-weight">Pokemon Database</a>
+        <a className href="https://pokemondb.net/pokedex/stats/height-weight">Pokémon Database</a>
       </div>
      
-    
     </div>
   );
 }
