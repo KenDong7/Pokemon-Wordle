@@ -35,7 +35,6 @@
   display: table-row-group;
 }
 
-
 .container {
   display:flex;
   opacity:.9;
@@ -48,6 +47,7 @@ img {
   height: 25em;
   background-color: #000000;
   padding-left: 30px;
+  
 }
 
 input {
@@ -60,7 +60,8 @@ input {
 
 body {
   background-image: url("https://wallpaper.dog/large/10880926.jpg");
-  background-size: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
   font-family: rubik;
   justify-content: center;
   margin: 0 auto;
@@ -75,4 +76,34 @@ h1 {
 
 .field {
   width: 100px;
+}
+
+.correct {
+  color: green;
+}
+
+.wrong {
+  color: red;
+}
+
+.link {
+  font-size: 25px;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+a {
+  font-weight: bold;
+  font-size: 20px;
+  color:black;
+}
+
+.high {
+  color: red;
+}
+
+.low {
+  color: blue;
 }

@@ -1,9 +1,11 @@
 import React, {useEffect, useState, useMemo} from "react";
 import './App.css';
 import axios from "axios";
+import CorrectType1 from "./CorrectType1";
+import CorrectType2 from "./CorrectType2";
 
 function App() {
-  const [pokemon, setPokemon] = useState("pikachu");
+  const [pokemon, setPokemon] = useState("");
   const [pokemonData, setPokemonData] = useState([]);
   const [pokemonType, setPokemonType] = useState([]);
   const [targetData, setTargetData] = useState([]);
@@ -54,21 +56,6 @@ function App() {
   }
 
  
-  function type2() {
-    let type2 = document.getElementById("type2")
-    console.log(type2)
-    if (pokemonType.length == 1) {
-       type2.innerHTML = "None"
-    }
-    else {
-       type2.innerHTML = capitalize(pokemonType[1])
-    }
-    return type2
-  }
-  
-  function capitalize(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-  }
 
   const handleChange = (e) => {
     setPokemon(e.target.value.toLowerCase())
@@ -78,11 +65,11 @@ function App() {
     e.preventDefault()
     getPokemon()
     isCorrect()
+    console.log(pokemonData[0].name)
+    console.log(targetData[0].name)
   }
 
   const isCorrect  = ()  => {
-    console.log(pokemonData[0].name)
-    console.log(targetData[0].name)
     if (pokemonData[0].name == targetData[0].name) {
       alert("You have guessed correctly!")
     }
@@ -90,7 +77,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Pokemon Wordle</h1>
+      <h1>Who's That Pokémon?</h1>
       <form onSubmit = {handleSubmit}>
         <label>
           <input type = "text" onChange = {handleChange} placeholder = "Enter Pokemon Name">
@@ -106,11 +93,11 @@ function App() {
 
               <div className = "tableRow"> 
                 <div className = "tableCell"> Type 1</div>
-                <div className = "tableCell field" id = "type1"> {capitalize(pokemonType[0])} </div>
+                <CorrectType1 targetType = {targetType[0]} chosenType = {pokemonType[0]}/>
               </div>
               <div className = "tableRow"> 
                 <div className = "tableCell"> Type 2</div>
-                <div className = "tableCell field" id = "type2"> filler {targetType[0]}</div>
+                <CorrectType2 targetType = {targetType[1]} chosenType = {pokemonType[1]}/>
               </div>
               <div className = "tableRow"> 
                 <div className = "tableCell"> Height </div>
@@ -125,7 +112,10 @@ function App() {
         </div>
         )
       })}
-      
+      <div className = "container">
+        <a className href="https://pokemondb.net/pokedex/stats/height-weight">Pokemon Database</a>
+      </div>
+     
     
     </div>
   );
