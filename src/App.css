@@ -60,7 +60,7 @@ input {
 
 body {
   background-image: url("https://wallpaper.dog/large/10880926.jpg");
-  background-size: cover;
+  background-size: 1 1;
   background-repeat: no-repeat;
   font-family: rubik;
   justify-content: center;
@@ -107,3 +107,5 @@ a {
 .low {
   color: blue;
 }
+
+
