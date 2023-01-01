@@ -4,15 +4,19 @@
 }
 
 .table {
-  display:table;
-  max-width: 20em;
-  float:right;
+  color: white;  display:table;
+  max-width: 30em;
+  padding-right: 30px;
+  float: right;
   display: flex;
   align-items: center;
+  background-color: #000000;
 }
 
 .tableRow {
   display: table-row;
+  height: 35px;
+  color: rgb(247, 247, 247);
 }
 
 .tableHeading {
@@ -22,25 +26,28 @@
 }
 
 .tableCell, .tableHead {
-  border: 2px solid #140909;
+  border: 2px solid rgb(17, 0, 255);
   display: table-cell;
   padding: 3px 10px;
 }
 
+.tableBody {
+  display: table-row-group;
+}
 
 
 .container {
   display:flex;
   opacity:.9;
   font-weight: bold;
-  background-color: #d8b7b7;
   justify-content: center;
   width: 100%;
 }
 
 img {
   height: 25em;
-  
+  background-color: #000000;
+  padding-left: 30px;
 }
 
 input {
@@ -57,4 +64,15 @@ body {
   font-family: rubik;
   justify-content: center;
   margin: 0 auto;
+}
+
+h1 { 
+  font-size: 70px;
+  font-weight: bold;
+  color: black;
+  font-family: Brush Script MT;
+}
+
+.field {
+  width: 100px;
 }
