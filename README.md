@@ -3,6 +3,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Usage
-In order to run the app, use:
+In order to run the app, use:\
 npm start
 
