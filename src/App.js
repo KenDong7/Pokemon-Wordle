@@ -5,6 +5,7 @@ import CorrectType1 from "./CorrectType1";
 import CorrectType2 from "./CorrectType2";
 import CorrectWeight from "./CorrectWeight";
 import CorrectHeight from "./CorrectHeight";
+import Result from "./Result";
 
 function App() {
   const [pokemon, setPokemon] = useState("");
@@ -12,6 +13,8 @@ function App() {
   const [pokemonType, setPokemonType] = useState([]);
   const [targetData, setTargetData] = useState([]);
   const [targetType, setTargetType] = useState([]);
+  const [counter, setCounter] = useState(0);
+
 
   useEffect(() => {
     getTargetPokemon();
@@ -37,7 +40,6 @@ function App() {
     }
   }
  
- 
 
   const getPokemon = async () => {
     const data = [];
@@ -52,12 +54,12 @@ function App() {
         setPokemonType([res.data.types[0].type.name,res.data.types[1].type.name])
       }
       setPokemonData(data)
+      setCounter(counter + 1)
     } catch (error) {
       console.log(error)
     }
   }
 
- 
 
   const handleChange = (e) => {
     setPokemon(e.target.value.toLowerCase())
@@ -66,17 +68,20 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault()
     getPokemon()
+  }
+
+  /*useEffect(() => {
     isCorrect()
-    console.log(pokemonData[0].name)
-    console.log(targetData[0].name)
-  }
-
-  const isCorrect  = ()  => {
-    if (pokemonData[0].name == targetData[0].name) {
-      alert("You have guessed correctly!")
+  }, [pokemonData]);
+  
+  const isCorrect = ()  => {
+    if (pokemonData[0] != null && targetData[0] != null) {
+      if (pokemonData[0].name == targetData[0].name) {
+        alert(`Guessed in ${counter} Tries`)
+      }
     }
-  }
-
+  }*/
+ 
   return (
     <div className="App">
       <h1>Who's That Pokémon?</h1>
@@ -109,6 +114,7 @@ function App() {
                 <div className = "tableCell"> Weight </div>
                 <CorrectWeight targetWeight = {Math.round(targetData[0].weight / 4.53592 * 10) / 10} chosenWeight = {Math.round(data.weight / 4.53592 * 10) / 10}/>
               </div>
+              <Result targetName = {targetData[0].name} chosenName = {pokemonData[0].name} counter = {counter}/>
             </div>
           </div>
         </div>

@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-  
 }
 
 .table {
@@ -33,6 +32,8 @@
 
 .tableBody {
   display: table-row-group;
+  font-size: 15px;
+  font-family: 'Times New Roman';
 }
 
 .container {
@@ -65,6 +66,7 @@ body {
   font-family: rubik;
   justify-content: center;
   margin: 0 auto;
+  
 }
 
 h1 { 
@@ -96,7 +98,7 @@ h1 {
 
 a {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 30px;
   color:black;
 }
 
@@ -108,4 +110,12 @@ a {
   color: pink;
 }
 
+.tableCell.field {
+  font-family: Fantasy;
+  font-size: 20px;
+}
 
+#result {
+  padding-top: 55px;
+  font-size: 25px;
+}
