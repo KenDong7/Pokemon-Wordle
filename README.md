@@ -6,11 +6,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 - Web application game based on guessing a random Pokemon when given information about chosen Pokemons
 - Stats shown are sorted into categories based on color:
-```diff
-- Incorrect
-+ Correct
-! Too High
-```
+- ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) `Incorrect`
+- ![#00FF00](https://placehold.co/15x15/00FF00/00FF00.png) `Correct`
+- ![#FFA500](https://placehold.co/15x15/FFA500/FFA500.png) `Too High`
+- ![#FFC0CB](https://placehold.co/15x15/FFC0CB/FFC0CB.png) `Too Low`
 - The website can be viewed at <a href = "https://guesspokemonname.netlify.app/"> Who's That Pokemon?</a>
 ## Usage
 In order to run the app, use:
