@@ -14,10 +14,10 @@ export function Result({targetName, chosenName, counter}) {
         }
     }
     else {
-        let wrong = ["Really?", "No.", "Are you kidding Me?", "Not even Close", "Are you even Trying?", "WRONG", "What?"]
-        let num = Math.floor(Math.random() * 7);
+        let wrong = ["Really?", "No.", "Are you kidding me?", "Not even close...", "Are you even trying?", "WRONG!!", "What?"]
+        let num = counter % 7
         return (
-            <p id="result">Nope</p>
+            <p id="result">{wrong[num]}</p>
         )
     }
 }
