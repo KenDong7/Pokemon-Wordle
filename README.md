@@ -10,8 +10,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 -     Red = Incorrect
 -     Orange = Too High
 -     Pink = Too Low
-- The application can be viewed at https://www.poketeam.tk/.
-- 
+- The website can be viewed at <a href = "https://guesspokemonname.netlify.app/"> Who's That Pokemon?</a>
 ## Usage
 In order to run the app, use:\
 npm start
