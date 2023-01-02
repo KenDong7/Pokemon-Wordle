@@ -13,6 +13,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ```
 - The website can be viewed at <a href = "https://guesspokemonname.netlify.app/"> Who's That Pokemon?</a>
 ## Usage
-In order to run the app, use:\
+In order to run the app, use:
 ### npm start
 Then view at http://localhost:3000/
