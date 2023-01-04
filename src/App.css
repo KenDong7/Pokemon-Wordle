@@ -1,10 +1,10 @@
 .App {
   text-align: center;
+  
 }
 
 .table {
   color: white;  display:table;
-  
   padding-right: 80px;
   float: right;
   display: flex;
@@ -69,14 +69,16 @@ body {
   font-family: rubik;
   justify-content: center;
   margin: 0 auto;
-  
 }
 
 h1 { 
-  font-size: 70px;
+  font-size: 75px;
   font-weight: bold;
   color: black;
   font-family: Brush Script MT;
+  align-items: center;
+  width: 100%;
+  position: absolute;
 }
 
 .field {
@@ -89,6 +91,14 @@ h1 {
 
 .wrong {
   color: red;
+}
+
+.high {
+  color: orange;
+}
+
+.low {
+  color: pink;
 }
 
 .link {
@@ -105,14 +115,6 @@ a {
   color:black;
 }
 
-.high {
-  color: orange;
-}
-
-.low {
-  color: pink;
-}
-
 .tableCell.field {
   font-family: Fantasy;
   font-size: 20px;
@@ -121,4 +123,36 @@ a {
 #result {
   padding-top: 40px;
   font-size: 25px;
+}
+
+.header {
+  display: flex;
+  
+}
+
+.rules {
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  align-items: left;
+  background-color: #000000;
+  font-size: 30px;
+  width: 200px;
+  height: 230px;
+  flex-direction: column;
+  font-family: Fantasy;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 0 0;
+  font-size: 20px;
+  line-height: .6em;
+}
+
+#rules {
+  margin-bottom: 3px;
+  text-decoration: underline;
 }
