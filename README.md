@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## About The Project
 
-- Web application game based on guessing a random Pokemon when given information about chosen Pokemons.\
+- Web application game based on guessing a random generation 1 Pokemon when given information about chosen Pokemons.\
 Stats shown are sorted into categories based on color:
 - ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) `Incorrect`
 - ![#00FF00](https://placehold.co/15x15/00FF00/00FF00.png) `Correct`
