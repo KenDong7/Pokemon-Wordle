@@ -90,7 +90,7 @@ function App() {
       </div>
         <form onSubmit = {handleSubmit}>
           <label>
-            <input type = "text" onChange = {handleChange} placeholder = "Enter Pokemon Name">
+            <input type = "text" onChange = {handleChange} placeholder = "Enter Pokémon Name">
             </input>
           </label>
         </form>
