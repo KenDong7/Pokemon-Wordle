@@ -61,7 +61,11 @@ input {
 
 body {
   background-image: url("https://wallpaper.dog/large/10880926.jpg");
-  background-size: cover;
+  -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+  background-repeat: no-repeat;
   font-family: rubik;
   justify-content: center;
   margin: 0 auto;
