@@ -87,6 +87,16 @@ function App() {
           
         </div>
         <h1>Who's That Pokémon?</h1>
+        <div className = "rules"> 
+          <p id = "rules"> RULES:</p>
+          <ul>
+            <p className = "correct">Correct</p>
+            <p className = "wrong">Incorrect</p>
+            <p className = "high">Too High</p>
+            <p className = "low">Too Low</p>
+          </ul>
+          
+        </div>
       </div>
         <form onSubmit = {handleSubmit}>
           <label>

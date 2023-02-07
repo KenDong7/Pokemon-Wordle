@@ -14,8 +14,8 @@ export function Result({targetName, chosenName, counter}) {
         }
     }
     else {
-        let wrong = ["Really?", "No.", "Are you kidding me?", "Not even close...", "Are you even trying?", "WRONG!!", "What?"]
-        let num = counter % 7
+        let wrong = ["No", "Nope", "BUZZ", "Possibly?", "Nah"]
+        let num = counter % 5
         return (
             <p id="result">{wrong[num]}</p>
         )
