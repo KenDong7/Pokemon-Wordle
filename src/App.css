@@ -74,9 +74,6 @@ h1 {
   color: black;
   font-family: Brush Script MT;
   align-items: left;
-  width:100%; 
-  /*width: 120rem;
-  position: absolute;*/
 }
 
 .field {
@@ -125,6 +122,7 @@ a {
 
 .header {
   display: flex;
+  justify-content: space-between;
 }
 
 .rules {
@@ -134,7 +132,7 @@ a {
   background-color: #000000;
   font-size: 30px;
   width: 200px;
-  height: 230px;
+  height: 260px;
   flex-direction: column;
   font-family: Fantasy;
 }
@@ -148,10 +146,5 @@ ul {
 }
 
 #rules {
-  margin-bottom: 0px;
-  text-decoration: underline;
-  -webkit-transform: scale(2, 1);
-  -moz-transform: scale(2, 1);
-  -o-transform: scale(2, 1);
-  transform: scale(2, 1);
+  font-size: 35px;
 }
